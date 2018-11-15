@@ -1,0 +1,32 @@
+﻿<Window x:Class="GestionEmpleados.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GestionEmpleados"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Loaded="Grid_Loaded">
+        <!--<ComboBox Height="23" HorizontalAlignment="Stretch" Margin="40,16,42,0" x:Name="teachersList"  VerticalAlignment="Top" Width="Auto" IsSynchronizedWithCurrentItem="True" ItemsSource="{Binding}" ItemTemplate="{StaticResource ClassTemplate}" SelectionChanged="teachersList_SelectionChanged" />-->
+        <ComboBox HorizontalAlignment="Left" Height="40" Margin="58,41,0,0"     x:Name="CbSucursales"  
+                  VerticalAlignment="Top" Width="703" SelectionChanged="CbSucursales_SelectionChanged"  
+                  IsEnabled="true"/>
+        <ListView x:Name="LvEmpleados" HorizontalAlignment="Left" Height="230" Margin="59,95,0,0" 
+                  VerticalAlignment="Top" Width="702" KeyDown="LvEmpleados_KeyDown">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding EmployeeID}" Header="ID"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding FirstName}" Header="Nombre"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding LastName}" Header="Apellio"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button x:Name="SavalBBDD" Content="SalvarBBDD" HorizontalAlignment="Left" Height="36" 
+                Margin="61,354,0,0" VerticalAlignment="Top" Width="100" IsDefault="True" IsEnabled="False"/>
+        <Button x:Name="NewEmployXML" Content="Nuevo Empleado desde XML" HorizontalAlignment="Left" 
+                Margin="195,354,0,0" VerticalAlignment="Top" Width="188" Height="36" Click="NewEmployXML_Click"/>
+        <Button x:Name="Exit" Content="Salir" HorizontalAlignment="Left" Height="36" 
+                Margin="637,354,0,0" VerticalAlignment="Top" Width="124"/>
+
+    </Grid>
+</Window>

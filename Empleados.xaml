@@ -1,0 +1,25 @@
+﻿<Window x:Class="GestionEmpleados.Empleados"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GestionEmpleados"
+        mc:Ignorable="d"
+        Title="Empleados" Height="262" Width="344">
+    <Grid Margin="0,10,2,7" HorizontalAlignment="Right" Width="324">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="157*"/>
+        </Grid.ColumnDefinitions>
+        <Label  Content="ID Empleado:" HorizontalAlignment="Right" Margin="0,24,196,0" VerticalAlignment="Top" Grid.Column="1" Height="26" Width="80"/>
+        <TextBox x:Name="IDEmpleado" HorizontalAlignment="Left" Height="26" Margin="119,24,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="155" Grid.Column="1"/>
+        <Label  Content="Nombre Empleado:" HorizontalAlignment="Right" Margin="0,68,196,0" VerticalAlignment="Top" Grid.Column="1" Height="26" Width="113"/>
+        <TextBox x:Name="Nombre_Empleado" HorizontalAlignment="Left" Height="26" Margin="119,68,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="155" Grid.Column="1"/>
+        <Label  Content="Sucursal:" HorizontalAlignment="Left" Margin="46,110,0,0" VerticalAlignment="Top" Grid.Column="1" RenderTransformOrigin="0.482,0.269" Height="26" Width="56"/>
+        <TextBox x:Name="ID_Sucursal" HorizontalAlignment="Left" Height="26" Margin="119,110,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="155" Grid.Column="1" RenderTransformOrigin="-0.013,0.769"/>
+        <Button Content="Salvar" Grid.Column="1" Margin="29,169,212,10" Click="Button_Click"/>
+        <Button Content="Exportar XML" Grid.Column="1" HorizontalAlignment="Left" Margin="119,0,0,10" VerticalAlignment="Bottom" Width="94" Height="35" RenderTransformOrigin="-0.173,0.375"/>
+        <Button Content="Salvar" Grid.Column="1" HorizontalAlignment="Left" Margin="229,169,0,0" VerticalAlignment="Top" Width="75" Height="35" RenderTransformOrigin="-0.173,0.375"/>
+
+    </Grid>
+</Window>
